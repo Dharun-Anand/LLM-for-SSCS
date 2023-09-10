@@ -17,7 +17,7 @@ type()- runs the prompt for all articles for the dimension 'type of compromise'.
 impacts()- is for the dimension 'impacts'\
 nature()- is for the dimension 'nature'\
 solution()- is for the dimension 'Solutions/learnings'\
-intent()- is for the dimension 'intent'\
+intent()- is for the dimension 'intent'
 
 4. BardPrompts.py:
 This file contains the code for prompting GPT 3.5's response to the various prompts used in the paper.\
@@ -26,7 +26,7 @@ For example, 'intent_prompt' contains the prompt for the intent dimension and so
    
 5. Classifying articles-analysis.xlsx
 This Excel file contains the manual labelling by the raters for each article.\
-It also contains the calculation for both the accuracy of GPT (GPT analysis) and Bard (Bard analysis).\
+It also contains the calculation for both the accuracy of GPT (GPT analysis) and Bard (Bard analysis).
 
 6. Appendix.pdf: 
-This pdf contains the appendix for the paper with the relevant tables and figures.\
+This pdf contains the appendix for the paper with the relevant tables and figures.
