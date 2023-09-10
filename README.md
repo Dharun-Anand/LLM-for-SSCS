@@ -5,7 +5,7 @@ This repository contains the additional data for the paper titled "An Empirical 
 
 There are 5 files in this repository. 
 
-1. GptCode:\n
+1. GptCode:
 This file contains the code for prompting GPT 3.5's response to the various prompts used in the paper.
 There are functions for each dimension:
 type()- runs the prompt for all articles for the dimension 'type of compromise'. 
