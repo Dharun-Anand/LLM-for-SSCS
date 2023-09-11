@@ -335,7 +335,7 @@ def compare_dic(dict1, list1):
     return mismatch_indices, accuracy
 
 
-def classification():
+def type():
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     list = [] #list to store the choice from prompts
@@ -399,18 +399,18 @@ def classification():
     workbook.save("TypeGPT.xlsx")
     # list2 = [1, 2, 2, 4, 5]
 
-    mismatch_indices, accuracy = compare_dic(compromise_dic, list)
+    # mismatch_indices, accuracy = compare_dic(compromise_dic, list)
     
-    print("Mismatch Articles: ", mismatch_indices)
-    unknown_list = []
-    for i in range(len(list)):
-        if list[i] == -1:
-            unknown_list.append(i+1)
-    print("Unknown Articles: ", unknown_list)
-    print("Accuracy: ", accuracy)
-    plt.pie([accuracy, 1-accuracy], labels=['Matches', 'Mismatches'], autopct='%1.1f%%')
-    plt.title('Matching accuracy- dimensions')
-    plt.show()
+    # print("Mismatch Articles: ", mismatch_indices)
+    # unknown_list = []
+    # for i in range(len(list)):
+    #     if list[i] == -1:
+    #         unknown_list.append(i+1)
+    # print("Unknown Articles: ", unknown_list)
+    # print("Accuracy: ", accuracy)
+    # plt.pie([accuracy, 1-accuracy], labels=['Matches', 'Mismatches'], autopct='%1.1f%%')
+    # plt.title('Matching accuracy- dimensions')
+    # plt.show()
     return
 
 def summary():
@@ -483,49 +483,7 @@ def Solution(): #hallucinations and subjectivity
     return
 
 
-def intent():
-    workbook = openpyxl.Workbook()
-    sheet = workbook.active
-    list = [] #list to store the choice from prompts
-    i = 1
-    for key, value in articles.items(): #going through each article
-        prompt = (f"""
-                Was the root cause of the compromise:
-                Option 1: delibrate eg. cyberattack on a system, for example malicious attackers stealign information 
-                Option 2: accidental eg. Development incompetence  or a bug/vulnerability found
-                Explain your reasoning and select an option. Use a JSON format with the keys: 'Explanation', 'choice'
-                Based on the information provided in the Article delimited by triple backticks. Article: ```{value}``` 
-                """)
-
-        response = get_completion(prompt)
-        sheet.cell(row=i, column=1).value = key
-        sheet.cell(row=i, column=2).value = response
-        print(key)
-        print(response)
-        i += 1
-    # workbook.save("IntentGPT.xlsx")
-    return
-
-def duration():
-    list = [] #list to store the choice from prompts
-    i = 1
-    for key, value in articles.items(): #going through each article
-        prompt = (f"""
-                How long did it take for the incident to be resolved?
-                Explain your reasoning. Use a JSON format with the key: 'Duration'
-                If it is not mentioned return 'unclear' or 'not mentioned'
-                Based on the information provided in the Article delimited by triple backticks. Article: ```{value}``` 
-                """)
-
-        response = get_completion(prompt)
-        print(f"\nArticle {i}\n")
-        i += 1
-        print(response)
-
-    return
-
-
-def Responsible():   
+def nature():   
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     list = [] #list to store the choice from prompts
@@ -553,7 +511,7 @@ def Responsible():
 
     return
 
-def impacts_taxonomy():
+def impacts():
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     list = [] #list to store the choice from prompts
@@ -580,7 +538,7 @@ def impacts_taxonomy():
     workbook.save("impacts.xlsx")
     return
 
-def solution_taxonomy():
+def solution():
     workbook = openpyxl.Workbook()
     sheet = workbook.active
     list = [] #list to store the choice from prompts
@@ -600,7 +558,28 @@ def solution_taxonomy():
     workbook.save("numbers.xlsx")
     return
 
-# classification()
+def intent():
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    list = [] #list to store the choice from prompts
+    i = 1
+    for key, value in articles.items(): #going through each article
+        prompt = (f"""
+                Was the root cause of the compromise:
+                Option 1: delibrate eg. cyberattack on a system, for example malicious attackers stealign information 
+                Option 2: accidental eg. Development incompetence  or a bug/vulnerability found
+                Explain your reasoning and select an option. Use a JSON format with the keys: 'Explanation', 'choice'
+                Based on the information provided in the Article delimited by triple backticks. Article: ```{value}``` 
+                """)
+
+        response = get_completion(prompt)
+        sheet.cell(row=i, column=1).value = key
+        sheet.cell(row=i, column=2).value = response
+        print(key)
+        print(response)
+        i += 1
+    # workbook.save("IntentGPT.xlsx")
+    return
 
 
 def kappa():
@@ -615,4 +594,4 @@ def kappa():
     label = [1, 2, 3, 4,5, 6,7]
     print(cohen_kappa_score(cncf_list, GPT_list, labels=label, weights=None, sample_weight=None))
     return
-kappa()
+
