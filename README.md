@@ -4,7 +4,7 @@ This repository contains the supplementary data for the paper titled "An Empiric
 
 There are 6 files in this repository. 
 
-### In directory src:
+### In src:
 1. GptPrompts.py:                                                                       
 This file contains the code for prompting GPT 3.5's response to the various prompts used in the paper.\
 There are functions for each dimension:\
@@ -19,10 +19,9 @@ This file contains the code for prompting Bard's response to the various prompts
 The function 'classification()' contains all the prompts for Bard. Various variables contain the different prompts.\
 For example, 'intent_prompt' contains the prompt for the intent dimension and so on. 
 
-### In directory data:
-3. Classifying articles-analysis.xlsx
-This Excel file contains the manual labelling by the raters for each article.\
-It also contains the calculation for both the accuracy of GPT (GPT analysis) and Bard (Bard analysis).
+### In data:
+3. Appendix.pdf: 
+This pdf contains the appendix for the paper with the relevant tables and figures.
 
 4. articles.csv: 
 Contains all the articles in the catalog used as the dataset for the study in a CSV format.\
@@ -33,5 +32,16 @@ The link to this catalogue: https://github.com/cncf/tag-security/tree/main/suppl
 Contains all the articles in the catalog used as the dataset for the study.\
 For example, 'article1' contains the content of the first article in the catalog (sorted by the most recent article).\
 
-6. Appendix.pdf: 
-This pdf contains the appendix for the paper with the relevant tables and figures.
+6. Manual Labels.xlsx
+This Excel file contains the manual labels of the catalog from the 3 pairs of 2 analysts and their interrater agreement scores.
+
+7. LLM Data.xlsx
+
+
+3. Classifying articles-analysis.xlsx (OTDATED - REMOVE)
+This Excel file contains the manual labelling by the raters for each article.\
+It also contains the calculation for both the accuracy of GPT (GPT analysis) and Bard (Bard analysis).
+
+
+
+
