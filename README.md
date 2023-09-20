@@ -21,21 +21,25 @@ For example, 'intent_prompt' contains the prompt for the intent dimension and so
 
 ### In data:
 3. Appendix.pdf: 
-This pdf contains the appendix for the paper with the relevant tables and figures.
+This pdf contains the appendix for the paper with the following items:
+  A.1. Trend in accuracy of LLMs’ response over time
+  A.2. Distribution of ground truth for various dimensions
+  A.3. The final prompts for each dimension
+  A.4. Solutions and Learnings response
 
-4. articles.csv: 
+5. articles.csv: 
 Contains all the articles in the catalog used as the dataset for the study in a CSV format.\
 The catalog being referred to here is a collection of articles on software supply chain failures collected by CNCF.\
 The link to this catalogue: https://github.com/cncf/tag-security/tree/main/supply-chain-security/compromises
 
-5. articles.py:
+6. articles.py:
 Contains all the articles in the catalog used as the dataset for the study.\
 For example, 'article1' contains the content of the first article in the catalog (sorted by the most recent article).\
 
-6. Manual Labels.xlsx
+7. Manual Labels.xlsx
 This Excel file contains the manual labels of the catalog from the 3 pairs of 2 analysts and their interrater agreement scores.
 
-7. LLM Data.xlsx
+8. LLM Data.xlsx
 
 
 3. Classifying articles-analysis.xlsx (OTDATED - REMOVE)
