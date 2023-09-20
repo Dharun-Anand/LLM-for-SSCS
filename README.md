@@ -25,7 +25,7 @@ This pdf contains the appendix for the paper with the following items: \
   A.1. Trend in accuracy of LLMs’ response over time \
   A.2. Distribution of ground truth for various dimensions \
   A.3. The final prompts for each dimension \
-  A.4. Solutions and Learnings response \
+  A.4. Solutions and Learnings response 
 
 5. articles.csv: 
 Contains all the articles in the catalog used as the dataset for the study in a CSV format.\
