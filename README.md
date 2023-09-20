@@ -25,13 +25,13 @@ For example, 'article1' contains the content of the first article in the catalog
 This Excel file contains the manual labels of the catalog from the 3 pairs of 2 analysts and their interrater agreement scores.
 
 5. LLM Data.xlsx
-This Excel file contains the responses of the LLM, the analysis and calculations for the accuracy of each dimension. It contains several sheets and their description is as follows. 
+This Excel file contains the responses of the LLM, the analysis and calculations for the accuracy of each dimension. It contains several sheets and their description is as follows. \
 
 *Bard analysis: Contains the response for each dimension from Bard and the raters for each article. Also contains the calculations for the accuracy of each dimension and Cohen's kappa score for the inter-rater agreement between the raters for each dimension.\ 
 *GPT analysis:  Contains the response for each dimension from GPT  and from the raters for each article. Also contains the calculations for the accuracy of each dimension and Cohen's kappa score for the inter-rater agreement between the raters for each dimension. The graphs used in the paper are also here. \
 *GPT- Article review (Type): Contains further analysis for the dimension- 'type of compromise'. In this sheet, two raters labelled this dimension for a sample of randomly chosen articles to further analyze why the accuracy for this dimension was lower than others. The kappa score between the two and their labels are given. As noted in the paper, we discovered that in most cases and when we disagreed with CNCF, we agreed with GPT and vice versa. Sometimes, it was difficult to categorize the failures as a specific type of compromise. \
 *GPT response for type: This sheet contains the response of GPT for the dimension 'type of compromise' for each article. \
-Solutions\learnings: This sheet contains the response of GPT for the dimension 'solutions/learnings' for all the articles. 
+*Solutions\learnings: This sheet contains the response of GPT for the dimension 'solutions/learnings' for all the articles. 
 
 ### In src:
 6. GptPrompts.py:                                                                       
